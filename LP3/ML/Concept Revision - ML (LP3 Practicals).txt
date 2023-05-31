@@ -1,0 +1,89 @@
+**Assignment 1 - ML - Uber Ride price prediction**
+
+# ML:
+- Branch of Computer Science, gives computers capability to learn without being externally programmed.
+
+# Types of ML:
+1) Supervised Learning:
+- Uses 'Labelled' dataset, based on that machine predicts the output.
+Eg: Classification & Regression
+
+2) Unsupervised Learning:
+- Uses 'Labelled' dataset, based on that machine predicts the output.
+- Main aim is to group unsorted dataset according to similarities and patterns.
+Eg: Clustering & Association
+
+3) Semi-Supervised Learning:
+- Lies between Supervised & Unsupervised learning.
+- Combination of 'Labelled' & 'Unlabelled' dataset to predict the output.
+
+4) Reinforcement Learning:
+- Feedback is given by AI agent.
+- Agent explores surrounding, uses hitting and trial & experiencing things.
+
+# Regression:
+- Relationship between Dependent & Independent variable.
+
+# Linear Regression:
+- ML algo based on supervised learning.
+- Predicts a dependent variable (y) based on a given independent variable (x).
+- Graphical reperesentation of linear relationship between x & y.
+
+# Random Forest Algorithm:
+- Random Forest is a popular machine learning algorithm.
+- Based on the Supervised learning technique.
+- Can be used for both Classification and regression problems in ML.
+- Based on Concepts of 'Ensemble Learning'.
+
+# Libraries Used:
+1) Numpy: Used for working with arrays and mathematical functions.
+2) Pandas: Used for Data analysis.
+3) Seaborn and Matplotlib: Data Visualization.
+4) Scikit Learn: Statistical Modelling
+
+**Assignment 2 - Email Spam Detection**
+
+# Classification Algorithm:
+- Supervised learning technique.
+- Identify category of new observations on basis of training data set.
+- If Classification problem has --> 2 possible outcomes called as --> 'Binary classifiers'.
+
+# K-nearest Neighbour Algorithm:
+- Supervised learning technique
+- It stores all --> Avaialaible data & Classifies --> Data points based on similarity.
+- New Data appears --> Easily classified --> which category.
+
+# Support Vector machine algorithm:
+- Most popular supervised learning technique.
+- Works well on classification & regression problems.
+- Main aim --> Creating Decision boundary --> Segeregating n-dimensional space into classes.
+- Mulitple decision boundries --> Known as 'Hyperplane'.
+
+**Assignment 3 - Neural Network based classifier**
+
+# Neural Network:
+- Knwon as ANN or SNN {Articfical/Simulated}
+- Subset of ML & Heart of DL.
+- Concept --> Making machines work like Humans --> Mimicking like how humans talk & think.
+- ANN consists of --> Node layer, input layer, hidden layer, output layer.
+
+#Types:
+- Perceptron: Oldest neural network
+- Recurrent: Time and series and stock market predictions.
+
+**Assignment 4 - K-nearest Neighbour**
+
+# KNN
+- Simplest machine learning algo.
+- Assumes similarity between new case data & availaible case data.
+- New data appears, easily classified which category to move on.
+- used for classification & regression, but mostly used for classification problem.
+
+**Assignment 5 - K-means clustering**
+
+# K-means clustering:
+- Unsupervised learning technique.
+- Used to solve clustering problems in ML.
+- Divides unlabelled dataset into different clusters.
+- K is predefined clusters.
+- Minimize sum distance between 2 points.

@@ -1,0 +1,137 @@
+**Assignment 1&2 - BCT - Metamask**
+
+# Metamask:
+- Ethereum wallet which bridges gap between UI & Ethereum.
+- Works in technology --> Web3.js
+- Web3.js written by ethereum core team.
+- Mainly used as a plugin in web browser.
+
+# Installation Steps is known:
+
+# Secret Key: bonus author carry endorse tennis please void skirt host panther electric drastic
+
+# Ethereum:
+
+- Ethereum is decentralized + Open Source Blockchain.
+- Ethereum is Cryptocurrency.
+- 2nd largest cryptocurrency in world.
+- It also gives an edge for smart contract functionality.
+- It is a program all above money.
+- Unit of ethereum is --> 1 Ether = 1,08,832/- INR
+
+1) Suppose, If we want to perform an operation.
+
+4 + 4 = 8
+
+Ethereum will tell you the ans is 8. But it will cost you 3 GAS.
+
+2) Suppose, To check wallet balance, then it will cost you 400 GAS.
+
+3) Suppose, Need some network for transaction in ether, then it will cost you 21,000 GAS.
+
+# GAS --> It is basically a unit or measures the amount, that is required for the computational effort to perform any operation on ethereum network.
+
+- Value of ethereum prices, doesn't affect the gas fees. Whether the value of ether is 2,000$ or 20,000$ it will always take 3 GAS for addition of 2 numbers.
+
+# Q) How much it will truly cost?
+
+Ans = Gas Cost x Gas Price
+
+- here, Gas Cost doesn't change.
+- here, Gas Price does change.
+
+- Now, Comes the concept of GWEI - Giga Wei.
+
+- Here, Wei is 1 penny or 1 satoshi.
+
+- And, 1 Ether == One Quintillion Weis
+
+- So, 1 GWEI = .000000001 ether
+
+Let's Take an Example:
+
+Suppose, we need to send money to my friend on ethereum.
+
+So, What is it's actual transaction cost, apart from sending money???
+
+# Things to know:
+- Gas Value = 21,0000 GAS
+- Price of 1 ether = 2,000$
+- Suppose, GWEI = 100
+- Now, what's the price of GAS?
+
+Gas Value x GWEI 
+= 21,000 x 100
+= 21,000 x .00000000100 
+= .0021 ethereum to send money.
+
+Now, what's the amount in dollars?
+
+.0021 x 2000 = 4.2$ Transaction fees.
+
+
+**Assignment 3 - BCT - Smart Contract**
+
+# Smart Contract:
+- It is simply as the real-life contract.
+- It follows the condition of --> if(this) then(that)
+- It computer program is written, which works as an agreement between 2 parties.
+- No involvement of 3rd-party.
+- It is Distributed, Deterministic, secured, Immuatable.
+- Drawback is also Immutable --> For any change need to create a new contract.
+- Drawback is difficult to
+
+EXAMPLE : KICKSTART
+- Works between customers and company founders.
+- Want an certain amount to be raised from people.
+- If FUNDED successfully, people will be benefitted with reward.
+- If not FUNDED successfully, people's money will be revert back.
+
+**Assignment 4 - BCT - Solidity Program**
+
+# Solidity:
+- Brand-new Programming language.
+- Mixture of CPP & Javascript.
+- Created by ethereum developers.
+- Runs of ethereum virtual machine.
+- Smart contract written in solidity language.
+- It doesn't provides output, it checks only whethere is compiled successfully or not.
+- Direct deploy it.
+
+# Ethereum Virtual Machine (EVM):
+- Run time environment for executing the smart contracts in blockchain.
+
+**Assignment 5 - BCT - Survey report and Types of Blockchain**
+
+# Blockchain:
+- Decentralized and Distributed database.
+- It is chain of blocks, which contains node and hashed values which is divided across entire network.
+
+# Types of Blockhain:
+- 3 types:
+
+1) Public Blockchain:
+- Anyone having access of internet, can be a part of public blockchain network.
+- A user who is a part of public blockchain network, has authorized access to current and past records, & verify transactions of blockchain.
+
+2) Private Blockchain:
+- Permission restricted to a person, basically operative in closed network.
+- Works usually within an organization, where only selected members are part of blockhain.
+
+3) Consortium Blockchain:
+- Semi-decentralized type where more than one organization manages blockchain netwwork.
+
+4) Hybrid Blockchain:
+- Combination of public and private blockchain.
+- Private permission-based-system.
+- Public permission-based-system.
+
+
+**Assignment 6 - BCT - Hyperledger in blockchain**
+
+# Hyperledger:
+- Hyperledger is an open source project created to support the development of blockchain-based distributed ledgers
+- Hyperledger consists of a collaborative effort to create the needed frameworks, standards, tools and libraries to build blockchains and related applications.
+
+
+

@@ -1,0 +1,336 @@
+# Assignment 1
+
+# Fibonacci - Iteration
+
+*CODE:*
+
+//Display Fibonacci series using Iterative way
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n, t1=0, t2=1, next_term;
+    
+    cout<<"Enter a positive integer: "<<endl;
+    cin>>n;
+    
+    cout<<"Fibonacci series: "<<t1<<" , "<<t2<<" , ";
+    
+    next_term = t1 + t2;
+    
+    while(next_term<=n)
+    {
+        cout<<next_term<<" , ";
+        t1 = t2;
+        t2 = next_term;
+        next_term = t1 + t2;
+    }
+    
+    return 0;
+}
+
+//Time Complexity: O(n)
+
+# Fibonacci - Recursive
+
+CODE:
+
+// // Recursion - Fibonacci Series
+
+// // Concept: term_n = term_(n-1) + term_(n-2)
+
+// // Base Condition: if(n==0 || n==1) => return n;
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int get_fibonacci(int num)
+{
+    if (num == 0 || num == 1)
+    {
+        return num;
+    }
+
+    return get_fibonacci(num - 1) + get_fibonacci(num - 2);
+
+}
+
+int main()
+{
+    int num;
+    cout<<"Enter the positive interger: "<<endl;
+    cin>>num;
+
+    for(int i=0; i<num; i++)
+    {
+        cout<<get_fibonacci(i)<<" ";
+    }
+
+    return 0;
+}
+
+// //Time Complexity: O(2^n)
+
+# Assignment 2 - Huffman Encoding - Greedy
+
+#import library
+import heapq
+
+#create class
+class node:
+    #constructor_1
+    def __init__(self, freq, symbol, left=None, right=None):
+
+        #frequency
+        self.freq = freq
+
+        #symbol
+        self.symbol = symbol
+
+        #left node of current tree
+        self.left = left
+
+        #right node of current tree
+        self.right = right
+
+        #blank string
+        self.huff = ''
+
+    #constructor 2
+    def __lt__(self, nxt):
+        return self.freq < nxt.freq
+
+def printNodes(node, val=''):
+    
+    #create newVal
+    newVal = val + str(node.huff)
+
+    #if node --> not an edge node --> traverse inside
+    if(node.left):
+        printNodes(node.left, newVal)
+    if(node.right):
+        printNodes(node.right, newVal)
+
+    #if node --> edge node --> display huffman node
+    if(not node.left and not node.right):
+        print(f"{node.symbol} -> {newVal}")
+
+#character list
+chars = ['a', 'b', 'c', 'd', 'e', 'f']
+
+#frequency list
+freq = [5, 9, 12, 13, 16, 45]
+
+#empty list
+nodes = []
+
+#pushing values in nodes
+for x in range(len(chars)):
+    heapq.heappush(nodes, node(freq[x], chars[x]))
+
+while len(nodes)>1:
+
+    #sort them in ascending order - Nodes
+    left = heapq.heappop(nodes)
+    right = heapq.heappop(nodes)
+
+    #direction assigning
+    left.huff = 0
+    right.huff = 1
+
+    #combine 2 smallest nodes and make parent node
+    newNode = node(left.freq+right.freq, left.symbol+right.symbol, left, right)
+
+    #push it into the heapq library
+    heapq.heappush(nodes, newNode)
+
+#disply huffman tree
+printNodes(nodes[0])
+
+# Assignment 3 - Fractional Knapsack - Greedy
+
+CODE:
+
+#Fractional Knapsack - Greedy Method - Coding
+
+class Item:
+    def __init__(self, value, weight):
+        self.value = value
+        self.weight = weight
+        
+def fractionalKnapsack(W, arr):
+    
+    #sorting the array, according to P/W ratio
+    arr.sort(key=lambda x:(x.value/x.weight), reverse=True)
+    
+    #Storing Final value
+    finalvalue = 0.0
+    
+    #Looping through the items
+    for item in arr:
+        if item.weight<=W:
+            W -= item.weight
+            finalvalue += item.value
+            
+        else:
+            finalvalue += item.value * W/item.weight
+            break
+    
+    # Returning final value
+    return finalvalue
+            
+#driver code
+if __name__ == "__main__":
+    
+    W = 50
+    arr = [Item(60,10), Item(100,20), Item(120,30)]
+    
+    #Function Calling
+    max_val = fractionalKnapsack(W,arr)
+    
+    #Printing Result
+    print(max_val)
+
+#Time Complexity: O(nlogn)
+
+# Assignment 4 - 0/1 Knapsack - DP
+
+CODE:
+
+# A Dynamic Programming based Python
+# Program for 0-1 Knapsack problem
+# Returns the maximum value that can
+# be put in a knapsack of capacity W
+
+
+def knapSack(W, wt, val, n):
+	K = [[0 for x in range(W + 1)] for x in range(n + 1)]
+
+	# Build table K[][] in bottom up manner
+	for i in range(n + 1):
+		for j in range(W + 1):
+			if i == 0 or j == 0:
+				K[i][j] = 0
+			elif wt[i-1] <= j:
+				K[i][j] = max(val[i-1] + K[i-1][j-wt[i-1]], K[i-1][j])
+			else:
+				K[i][j] = K[i-1][j]
+		
+	return K[n][W]
+
+# Driver code
+val = [60, 100, 120]
+wt = [10, 20, 30]
+W = 50
+n = len(val)
+print(knapSack(W, wt, val, n))
+
+# Time & Space Complexity: O(W*n)
+
+# Assignment 5 - N-Queen Problem - Backtracking
+
+CODE:
+
+# Python3 program to solve N Queen
+# Problem using backtracking
+global N
+N = 4
+
+def printSolution(board):
+	for i in range(N):
+		for j in range(N):
+			print(board[i][j], end = " ")
+		print()
+
+# A utility function to check if a queen can
+# be placed on board[row][col]. Note that this
+# function is called when "col" queens are
+# already placed in columns from 0 to col -1.
+# So we need to check only left side for
+# attacking queens
+def isSafe(board, row, col):
+
+	# Check this row on left side
+	for i in range(col):
+		if board[row][i] == 1:
+			return False
+
+	# Check upper diagonal on left side
+	for i, j in zip(range(row, -1, -1),
+					range(col, -1, -1)):
+		if board[i][j] == 1:
+			return False
+
+	# Check lower diagonal on left side
+	for i, j in zip(range(row, N, 1),
+					range(col, -1, -1)):
+		if board[i][j] == 1:
+			return False
+
+	return True
+
+def solveNQUtil(board, col):
+	
+	# base case: If all queens are placed
+	# then return true
+	if col >= N:
+		return True
+
+	# Consider this column and try placing
+	# this queen in all rows one by one
+	for i in range(N):
+
+		if isSafe(board, i, col):
+			
+			# Place this queen in board[i][col]
+			board[i][col] = 1
+
+			# recur to place rest of the queens
+			if solveNQUtil(board, col + 1) == True:
+				return True
+
+			# If placing queen in board[i][col
+			# doesn't lead to a solution, then
+			# queen from board[i][col]
+			board[i][col] = 0
+
+	# if the queen can not be placed in any row in
+	# this column col then return false
+	return False
+
+# This function solves the N Queen problem using
+# Backtracking. It mainly uses solveNQUtil() to
+# solve the problem. It returns false if queens
+# cannot be placed, otherwise return true and
+# placement of queens in the form of 1s.
+# note that there may be more than one
+# solutions, this function prints one of the
+# feasible solutions.
+def solveNQ():
+	board = [ [0, 0, 0, 0],
+			[0, 0, 0, 0],
+			[0, 0, 0, 0],
+			[0, 0, 0, 0] ]
+
+	if solveNQUtil(board, 0) == False:
+		print ("Solution does not exist")
+		return False
+
+	printSolution(board)
+	return True
+
+# Driver Code
+solveNQ()
+
+#Time Complexity: O(N!)
+#Space Complexity: O(N)
+
+
+
+
+
+
+
+

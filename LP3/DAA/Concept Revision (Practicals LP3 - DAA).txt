@@ -1,0 +1,93 @@
+*DAA - Notes*
+
+*Assignment 1 - Fibonacci Series:*
+
+# Algorithm:
+- Defined as a finite set of steps.
+- Prrocess of executing actions --> STEP - BY - STEP.
+
+# Asymptotic Notations:
+- Mathematical notations used to describe the running time of an algorithm.
+- 3 types are:
+1) Big 'O' Notations
+- Gives, Worst case complexity of an algorithm.
+- Upper bound of an algorithm.
+2) Omega Notation:
+- Gives, Best case complexity of an algorithm.
+- Lower bound of an algorithm.
+3) Theta Notation:
+- Gives, Average case complexity of an algorithm.
+- Tight Bound.
+
+# Fibonacci Series - Iteration:
+1) Time Complexity:
+- Quantifies the time taken by an algorithm.
+- O(N) - Single While Loop
+2) Space Complexity:
+- Quantifies the amount of space taken by an algorithm.
+- O(1) 
+
+# Fibonacci Series - Recursion:
+1) Time Complexity:
+- Quantifies the time taken by an algorithm.
+- O(2^N)- Due to {term_n = term_n[n-1] + term_n[n-2]}
+2) Space Complexity:
+- Quantifies the amount of space taken by an algorithm.
+- O(N) 
+
+# Iteration vs Recursion:
+1) Iteration: When loop is repeatedly executes --> Set of instructions like --> FOR loops or WHILE loops.
+2) Recursion: When function calling is done repeatedly and stopped with a specific base condition.
+
+*Assignment 2 - Huffman Encoding - Greedy Strategy:*
+
+# Huffman Encoding:
+- Particular type of optimal prefix code.
+- Commonly used for lossless data compression.
+
+#Greedy Approach:
+- It is an approach for solving the problem by selecting the best availaible option at the moment.
+- It doesn't worry about, whether the current best result will bring the overall optimal result or not.
+
+# Time Complexity: O(nlogn)
+
+*Assignment 3 - Fractional Knapsack - Greedy Method*
+
+# Paarth Notes PDF
+
+# Time Complexity: O(nlogn)
+
+*Assignment 4 - 0/1 Knapsack - DP*
+
+# 0/1 Knapsack Problem:
+- It means that either items are completely filled or no items will be filled in knapsack.
+
+Time Complexity: O(W*n)
+Space Complexity: O(W*n)
+
+# Dynamic Programming:
+- It is optimization over plain recursion.
+- In recursive solution, there is repeated calls of same input again and again which increase time complexity, which we can optimize it using DP.
+- It signifies concept of reusablity --> as storing same sub-problems so that no need to recompute it later.
+- Simple optimization, gives result in significant result in reducing time complexity.
+
+*Assignment 5 - N - Queen Problem - Backtracking*
+
+# Backtracking:
+- Technique based on algorithm to solve a problem
+- It goes to dead end for finding the solution, if doesn't find out, backtracking to previous location for finding another solution.
+- Works on State space tree where DFS approach is used.
+- Backtracking appplied on different types of problems:
+1) Decision problem: used to find feasible solution of problem.
+2) Optimization problem: used to find best solution applied.
+3) Enumeration problem: used to find set of feasible solution.
+
+# N-queen concept
+
+Refer : Notes (Paarth)
+
+# N-queen is combinational optimization problem because it produces one or more solutions.
+
+# Time Complexity:O(N!) Because--> Since, for placing queens we are checking every row, column and backtracking it like (n-1)*(n-2)
+# Space Complexity: O(N) Because--> Uses arrays to store queens.
+
