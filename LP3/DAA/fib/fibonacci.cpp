@@ -1,5 +1,3 @@
-//Display Fibonacci series using Iterative way
-
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -13,16 +11,16 @@ int main()
     cout<<"Fibonacci series: "<<t1<<" , "<<t2<<" , ";
     
     next_term = t1 + t2;
-    
-    while(next_term<=n)
+    int count = 2;
+    while(count<n)
     {
         cout<<next_term<<" , ";
         t1 = t2;
         t2 = next_term;
         next_term = t1 + t2;
+        count++;
     }
     
     return 0;
 }
 
-//Time Complexity: O(n)
